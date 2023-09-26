@@ -1,0 +1,11 @@
+{
+  "name": "placement_cell",
+  "version": "1.0.0",
+  "description": "In this app you can create list of student and store data related to that student and just by clicking on a button you can download that data in csv format",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "devZee",
+  "license": "ISC"
+}
