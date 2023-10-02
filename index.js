@@ -38,7 +38,7 @@ app.use(session({
     },
     // this will store cookie in mongo in case server restarts 
     store: MongoStore.create({
-        mongoUrl: "mongodb://127.0.0.1:27017/placement_cell"
+        mongoUrl:'mongodb+srv://zishan:zishan@cluster0.qf3xyvd.mongodb.net/'
     })
 }));
 
