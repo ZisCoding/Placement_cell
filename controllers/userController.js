@@ -111,7 +111,7 @@ module.exports.addStudent = async (req,res)=>{
             batch:body.batch
         })
 
-        return res.redirect('back');
+        return res.redirect('/');
     } catch (error) {
         console.error("Error in creating student",error)
         return res.redirect('back');
