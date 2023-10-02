@@ -1,0 +1,45 @@
+<link rel="stylesheet" type="text/css" href="/assets/css/student_detail.css">
+
+<div id="studentDetailContainer" >
+    <div>
+        <h3>Company Name : <%= interview.name %></h3>
+        <h4>Interview Date : <%= interview.date %></h4>
+    </div>
+    <hr class="w-100" />
+    <form action=<%= `/scheduleinterview/${interview._id}` %> method="post">
+        <input id="collegeId" name="collegeId" type="string" required placeholder="College Id">
+        <select name="status">
+            <option>Pass</option>
+            <option>Fail</option>
+            <option>On hold</option>
+        </select>
+        <button>schedule interview</button>
+    </form>
+    <hr class="w-100" />
+    <div id="tableContainer">
+        <% if(interview.students.length==0){ %>
+            <h3 class="text-center">No Student Available</h3>
+        <% } else{ %>
+            <h3 class="text-center">Students</h3>
+            <table >
+                <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Interview Date</th>
+                    <th>Status</th>
+                </tr>
+                </thead>
+                <tbody>
+                
+                <% for(const student of interview.students){ %>
+                    <tr>
+                        <td><%= student.student.name %></td>
+                        <td><%= interview.date %></td>
+                        <td><%= student.status %></td>
+                    </tr>
+                <% } %>
+                </tbody>
+            </table>
+        <% } %>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+body{
+    position: relative;
+    min-height: 100vh; 
+    margin: 0;
+    background-color: rgba(27,142,248,.8);
+}
+
+main{
+    height: calc(100vh - 60px);
+    min-height: 500px;
+    position: relative;
+}

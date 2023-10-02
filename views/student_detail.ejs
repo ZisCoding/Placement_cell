@@ -1,0 +1,46 @@
+<link rel="stylesheet" type="text/css" href="/assets/css/student_detail.css">
+
+<div id="studentDetailContainer" >
+    <div>
+        <div class="d-flex justify-content-between">
+            <h3>Student Name : <%= student.name %></h3>
+            <div>
+                <a href="" id="edit">Edit</a>
+                <a href=<%= `/deletestudent/${student._id}` %> id="delete">Delete</a>
+            </div>
+        </div>
+        <hr class="w-100" />
+        <h5>Batch: <%= student.batch %></h5>
+        <h5>College Name: <%= student.college %></h5>
+        <h5>College Id: <%= student.collegeId %></h5>
+        <h5>Placement Status: <%= student.placementStatus %></h5>
+    </div>
+
+    <div id="tableContainer">
+        <% if(student.interviews.length==0){ %>
+            <h3 class="text-center">No Interviews Available</h3>
+        <% } else{ %>
+            <h3 class="text-center">Interviews</h3>
+            <table >
+                <thead>
+                <tr>
+                    <th>Company Name</th>
+                    <th>Interview Date</th>
+                    <th>Status</th>
+                </tr>
+                </thead>
+                <tbody>
+                
+                <% for(const interview of student.interviews){ %>
+                    <tr>
+                        <td><%= interview.company.name %></td>
+                        <td><%= interview.company.date%></td>
+                        <td><%= interview.status %></td>
+                    </tr>
+                <% } %>
+                </tbody>
+            </table>
+        <% } %>
+    </div>
+
+</div>

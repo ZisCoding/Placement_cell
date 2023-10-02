@@ -1,0 +1,52 @@
+<link rel="stylesheet"  type="text/css" href="/assets/css/add_student.css">
+
+
+
+<div id="formContainer">
+    <form id="addStudentForm" method="post" action="/addstudent">
+        <span id="heading">Add Student</span>
+
+        <div>
+            <label for="name">Name</label><br/>
+            <input id="name" name="name" type="text" required placeholder="Student's Name">
+        </div>
+        <div>
+            <label for="name">College</label><br/>
+            <input id="name" name="college" type="text" required placeholder="Student's College">
+        </div>
+        <div>
+            <label for="name">College Id</label><br/>
+            <input id="name" name="collegeId" type="text" required placeholder="Student's College Id">
+        </div>
+
+        <div id="scores">
+            <div>
+                <label for="dsa">DSA Score</label>    
+                <input id="dsa" name="dsa" type="text" required >
+            </div>
+            <div>
+                <label for="webd">WebD Score</label>    
+                <input id="webd" name="webd" type="text" required >
+            </div>
+            <div>
+                <label for="reactScore">React Score</label>    
+                <input id="reactScore" name="react" type="text" required >
+            </div>
+        </div>
+        <div id="placement">
+            <div>
+                <label>Placement Status</label>
+                <select name="placementStatus">
+                    <option>Placed</option>
+                    <option>Not Placed</option>
+                </select>
+            </div>
+            <div>
+                <label for="batch">Batch</label>    
+                <input id="batch" name="batch" type="text" required >
+            </div>
+        </div>
+
+        <button>Add Student</button>
+    </form>
+</div>

@@ -1,0 +1,29 @@
+<link rel="stylesheet" type="text/css" href="/assets/css/sign_up.css">
+
+
+<div id="formContainer">
+    <form id="signUpForm" action="/signin" method="POST">
+        <span id="heading">Sign In</span>
+
+        <div class="inputContainer">
+            <label id="email" for="name">Email</label><br/>
+            <input type="email" name="email" required placeholder="ex@gmail.com"/>
+        </div>
+        <div class="inputContainer">
+            <label for="name">Password</label><br/>
+            <input id="password" type="password" name="password" 
+            placeholder="Password" required/>    
+        </div>
+        
+        <button type="submit">Login</button>
+
+        <span id="login">Don't have an account? <a href="/signup">Sign Up</a></span>
+    </form>
+</div>
+
+<script>
+    document.getElementById('name').addEventListener('input',(e)=>{
+        document.getElementById('user').innerHTML=e.target.value;
+        
+    })
+</script>

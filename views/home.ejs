@@ -1,0 +1,23 @@
+<link rel="stylesheet" type="text/css" href="/assets/css/home.css">
+
+<div id="container">
+    <div id="studentListContainer">
+        <h3 style="text-align: center;">Students</h3>
+        <ol  id="studentList">
+            <% for(var i=0 ; i<students.length ; i++) { 
+            %>
+                <li><a href=<%= `/studentdetail/${students[i]._id}` %>><%= students[i].name %></a></li>
+            <% } %>
+        </ol>
+    </div>
+    <div id="interviewListContainer">
+        <h3 style="text-align: center;">Interviews</h3>
+        <ol  id="studentList">
+            <% for(interview of interviews) { 
+            %>
+                <li><a href=<%=`/interviewdetail/${ interview._id}` %>><%= interview.name %></a></li>
+            <% } %>
+        </ol>
+    </div>
+</div>
+
